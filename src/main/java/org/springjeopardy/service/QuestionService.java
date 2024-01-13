@@ -6,6 +6,8 @@ import org.springjeopardy.entity.QuestionEntity;
 import org.springjeopardy.model.QuestionModel;
 import org.springjeopardy.repository.QuestionRepository;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class QuestionService {
@@ -15,6 +17,11 @@ public class QuestionService {
     public QuestionModel getRandomQuestion() {
         QuestionEntity questionEntity = questionRepository.getRandomQuestion();
         return toModel(questionEntity);
+    }
+
+    public Optional<QuestionModel> getRandomQuestion(String value) {
+        Optional<QuestionEntity> questionEntity = Optional.ofNullable(questionRepository.getRandomQuestion(value));
+        return questionEntity.map(QuestionService::toModel);
     }
 
     private static QuestionModel toModel(QuestionEntity questionEntity) {
