@@ -1,4 +1,4 @@
-package org.microservices.springjeopardy.model;
+package org.springjeopardy.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

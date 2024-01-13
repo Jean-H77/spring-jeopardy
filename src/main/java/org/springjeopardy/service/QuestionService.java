@@ -1,8 +1,7 @@
-package org.microservices.springjeopardy;
+package org.springjeopardy.service;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.microservices.springjeopardy.repository.QuestionRepository;
+import org.springjeopardy.repository.QuestionRepository;
 import org.springframework.stereotype.Service;
 
 @Service

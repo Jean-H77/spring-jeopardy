@@ -1,4 +1,4 @@
-package org.microservices.springjeopardy.entity;
+package org.springjeopardy.entity;
 
 import jakarta.persistence.*;
 
