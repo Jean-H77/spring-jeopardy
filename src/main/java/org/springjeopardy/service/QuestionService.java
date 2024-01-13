@@ -17,7 +17,7 @@ public class QuestionService {
         return toModel(questionEntity);
     }
 
-    public QuestionModel toModel(QuestionEntity questionEntity) {
+    private static QuestionModel toModel(QuestionEntity questionEntity) {
         return QuestionModel.builder()
                 .question(questionEntity.getQuestion())
                 .value(questionEntity.getValue())
