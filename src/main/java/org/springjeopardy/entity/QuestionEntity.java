@@ -7,6 +7,7 @@ import java.sql.Date;
 
 @Entity
 @Getter
+@Table(name = "questions")
 public class QuestionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

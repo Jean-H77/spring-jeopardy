@@ -19,8 +19,13 @@ public class QuestionService {
         return toModel(questionEntity);
     }
 
-    public Optional<QuestionModel> getRandomQuestion(String value) {
-        Optional<QuestionEntity> questionEntity = Optional.ofNullable(questionRepository.getRandomQuestion(value));
+    public Optional<QuestionModel> getRandomQuestion(String round) {
+        Optional<QuestionEntity> questionEntity = Optional.ofNullable(questionRepository.getRandomQuestion(round));
+        return questionEntity.map(QuestionService::toModel);
+    }
+
+    public Optional<QuestionModel> getByQuestion(String question) {
+        Optional<QuestionEntity> questionEntity = Optional.ofNullable(questionRepository.findByQuestion(question));
         return questionEntity.map(QuestionService::toModel);
     }
 
