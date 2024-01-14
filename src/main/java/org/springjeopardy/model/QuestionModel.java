@@ -15,6 +15,7 @@ public class QuestionModel {
     private int showNumber;
     private Date airDate;
     private String round;
+    private String category;
     private String value;
     private String question;
     private String answer;

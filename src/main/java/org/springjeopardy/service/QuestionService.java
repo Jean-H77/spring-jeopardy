@@ -46,6 +46,7 @@ public class QuestionService {
                 .value(questionEntity.getValue())
                 .airDate(questionEntity.getAirDate())
                 .round(questionEntity.getRound())
+                .category(questionEntity.getCategory())
                 .answer(questionEntity.getAnswer())
                 .showNumber(questionEntity.getShowNumber())
                 .build();
